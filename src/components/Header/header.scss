@@ -1,0 +1,39 @@
+.header {
+	padding: 20px;
+	box-shadow: 0 1px 7px #0002;
+	background-color: var(--color-white);
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	@media (prefers-color-scheme: dark) {
+		box-shadow: 0 1px 7px #fff2;
+		background-color: #0001;
+
+	}
+
+	h1 {
+		> span {
+			color: green;
+		}
+		@media (prefers-color-scheme: dark) {
+			color:#fff;
+	
+		}
+	}
+
+	@media (max-width:479px) {
+		padding: 10px;
+
+		h1 {
+			font-size: 25px;
+		}
+	}
+
+	@media (max-height:411px) {
+		padding: 10px;
+
+		h1 {
+			font-size: 25px;
+		}
+	}
+}

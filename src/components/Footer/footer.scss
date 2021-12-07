@@ -1,0 +1,9 @@
+.footer {
+  padding: 20px;
+  box-shadow: 0 1px 7px #0002;
+  background-color: var(--color-white);
+  @media (prefers-color-scheme: dark) {
+	box-shadow: 0 1px 7px #fff1;
+  background-color: #0001;
+}
+}
