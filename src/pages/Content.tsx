@@ -1,3 +1,4 @@
+// eslint-disable-next-line @typescript-eslint/no-unused-vars
 import { AxiosError } from "axios";
 import { FC, ReactNode, useEffect, useState } from "react";
 import UserService from "../assests/api/user-service";
@@ -51,6 +52,7 @@ const Content: FC = () => {
 
   useEffect(() => {
     getUserData();
+  // eslint-disable-next-line react-hooks/exhaustive-deps
   }, []);
 
   return <section className="content container">{showContent()}</section>;

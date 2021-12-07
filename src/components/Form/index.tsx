@@ -11,7 +11,7 @@ const FormContainer: FC<FormProps> = ({
   formName,
 }) => {
   const pathName = window.location.pathname;
-  const { REG, LOGIN, RECOVERY_END: rEnd, RECOVERY_START: rStart } = RouteNames;
+  const { REG, LOGIN, RECOVERY_START: rStart } = RouteNames;
 
   const text = {
     textReg: "Регистрация",
@@ -20,7 +20,7 @@ const FormContainer: FC<FormProps> = ({
     restore: "Восстановить",
   };
   const { textReg, pass, restore, textAuth } = text;
-  
+
   const form = {
     _: "form",
     row: "form__row",

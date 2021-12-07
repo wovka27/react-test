@@ -1,6 +1,6 @@
 import { FC, useState } from "react";
+// eslint-disable-next-line @typescript-eslint/no-unused-vars
 import axios, { AxiosError } from "axios";
-import { saveInputValueHandler } from "../../assests/other";
 import { useActions } from "../../hooks/useActions";
 import { useTypedSelector } from "../../hooks/useTypedSelector";
 import Button from "../Button";
@@ -55,7 +55,6 @@ const Registration: FC = () => {
         name={"first_name"}
         onChange={(e: { target: { value: string } }) => {
           setRegName(e.target.value);
-          saveInputValueHandler(e.target.value);
         }}
       />
       <Input
@@ -67,7 +66,6 @@ const Registration: FC = () => {
         required
         onChange={(e: { target: { value: string } }) => {
           setRegFName(e.target.value);
-          saveInputValueHandler(e.target.value);
         }}
       />
 
@@ -82,7 +80,6 @@ const Registration: FC = () => {
         name={"phone"}
         onChange={(e: { target: { value: string } }) => {
           setRegTel(e.target.value.trim());
-          saveInputValueHandler(e.target.value);
           console.log(e.target.value);
         }}
       />
@@ -96,7 +93,6 @@ const Registration: FC = () => {
         required
         onChange={(e: { target: { value: string } }) => {
           setRegPass(e.target.value);
-          saveInputValueHandler(e.target.value);
         }}
       />
       <Button>{"Зарегистрироваться"}</Button>

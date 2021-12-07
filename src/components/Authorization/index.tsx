@@ -1,5 +1,5 @@
 import React, { FC, useState } from "react";
-import { saveInputValueHandler, storage } from "../../assests/other";
+import { storage } from "../../assests/other";
 import { useActions } from "../../hooks/useActions";
 import { useTypedSelector } from "../../hooks/useTypedSelector";
 import Button from "../Button";
@@ -8,7 +8,7 @@ import Input from "../Input";
 
 const Authorization: FC = () => {
   const { fetchAuth } = useActions();
-  const { error, isLoading, flag } = useTypedSelector(
+  const { error, isLoading } = useTypedSelector(
     (state) => state.auth
   );
   const [passwordValue, setPasswordValue] = useState<string>("");
@@ -41,7 +41,6 @@ const Authorization: FC = () => {
         value={phoneValue}
         onChange={(e: { target: { value: React.SetStateAction<string> } }) => {
           setPhoneValue(e.target.value);
-          saveInputValueHandler(e.target.value);
         }}
         required
         name={"tel"}
@@ -55,7 +54,6 @@ const Authorization: FC = () => {
         value={passwordValue}
         onChange={(e: { target: { value: React.SetStateAction<string> } }) => {
           setPasswordValue(e.target.value);
-          saveInputValueHandler(e.target.value);
         }}
         btn
         required
@@ -69,7 +67,7 @@ const Authorization: FC = () => {
       >
         <span id="fake_checkbox"></span>
       </Input>
-      <Button disabled={!flag && true}>
+      <Button>
         {isLoading ? "Обработка..." : "Войти"}
       </Button>
     </FormContainer>

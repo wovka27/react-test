@@ -1,4 +1,5 @@
 import { FC, useState } from "react";
+// eslint-disable-next-line @typescript-eslint/no-unused-vars
 import axios, { AxiosError } from "axios";
 import { sleep } from "../assests/other";
 import { storage } from "../assests/other";

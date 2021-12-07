@@ -1,4 +1,3 @@
-import React from "react";
 
 /**
  * Обьект с методами от LocalStorage
@@ -20,14 +19,4 @@ export const sleep = (time:number)  => {
       resolve(time)
     }, time);
   })
-}
-
-
-export const saveInputValueHandler = (val: React.SetStateAction<string>): boolean => {
-  if(!val) return false
-  storage.setItem('save_value', String(val))
-
-  if(storage.getItem('save_value')) return true
-
-  return false
 }
